@@ -1,5 +1,6 @@
-const { Builder, until, By } = require("selenium-webdriver");
+const { Builder, until, By} = require("selenium-webdriver");
 const { get } = require("selenium-webdriver/http");
+const assert = require('assert');
 
 const facebook = async () => {
     //Builder-->Sets the URL of a remote webDriver server to use
@@ -23,3 +24,4 @@ const facebook = async () => {
      
 };
 facebook();
+

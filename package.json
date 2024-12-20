@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "selenium-webdriver": "^4.27.0"
+    "chai": "^5.1.2",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.27.0",
+    "webdriver": "^9.4.4"
   }
 }
