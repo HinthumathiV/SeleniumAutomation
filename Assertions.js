@@ -21,11 +21,25 @@ const facebookassert = async () => {
   assert.strictEqual(actualtext,'Facebook helps you connect and share with the people in your life.','Text not match');
   console.log(actualtext);
 
- //Username
- let username= await driver.findElement(By.xpath("//input[@id='email']")).sendKeys("hindhumathi1164@gmail.com");
+//Username
+ // let username= await driver.findElement(By.xpath("//input[@id='email']")).sendKeys("hindhumathi1164@gmail.com");
+ 
+//Checking whether the Username box element isDisplayed
+//assertok()----> displays Boolean condition [true or false]
+ let username = await driver.findElement(By.xpath("//input[@id='email']"));
+ let isDisplayed= await username.isDisplayed();
+ assert.ok('the element should be  displayed', isDisplayed);
+ console.log(isDisplayed);
 
- //password
- let password= await driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("karthik@78");
+  //password
+//  let password= await driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("karthik@78");
+
+//Checking whether the password box element isDisplayed 
+//Using assertok()---->To check the element is visible or not and display boolean condition [true or false]
+ let password = await driver.findElement(By.xpath("//input[@id='pass']"));
+ let isDisplayed1= await password.isDisplayed();
+ assert.ok('the element should be displayed', isDisplayed);
+ console.log(isDisplayed1);
 
  //using wait
  await driver.sleep(3000);
@@ -43,6 +57,7 @@ const facebookassert = async () => {
    let actualtext1= await driver.findElement(By.xpath("//a[@class='_97w4']")).getText();
    assert.strictEqual(actualtext1,'Forgotten password?','Text does not match');
    console.log(actualtext1);
+   
 
   //  //Assert the Text[facebook]
   //  let imagesrc = await driver.findElement(By.xpath("//img[@class='_97vu img']")).getAttribute(z);

@@ -14,9 +14,10 @@ const createAccount = async () => {
 
    //firstname:
    let firstname = await driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("Hinthumathi");
+   
 
    //Surname:
-let surname = await driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("V");
+    let surname = await driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("V");
 
    //D.O.B
    //Date
