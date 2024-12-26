@@ -21,10 +21,11 @@ const seleniumautomation = async () => {
    let verifytext1 = await driver.findElement(By.xpath("//strong[text()='Following links will open new tab']")).getText();
    assert.strictEqual(verifytext1,'Following links will open new tab','Text does not match');
    console.log(verifytext1);
-
+                         
    //Clicking 1st link [Home]:
    let firstlink= await driver.findElement(By.xpath("//a[text()='Home']")).click();
-
+                             
+                                 //WINDOW HANDLING CONCEPTS IMPLEMENTED
    //Getting all the windows:
   let windowHandles = await driver.getAllWindowHandles();
    console.log('Window Handles:',windowHandles);
